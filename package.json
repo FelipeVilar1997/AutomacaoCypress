@@ -1,0 +1,25 @@
+{
+  "name": "DesafioToroInvestimentos",
+  "version": "1.0.0",
+  "description": "Desafio Toro Investimentos",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "cypress": "^6.4.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^2.5.5"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "testing"
+  ],
+  "author": "Felipe Vilar",
+  "license": "MIT"
+}
