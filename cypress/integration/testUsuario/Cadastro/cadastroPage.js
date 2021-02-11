@@ -7,11 +7,13 @@ const url = "https://www.toroinvestimentos.com.br"
 class CadastroPage {
 
     acessarSite() {
-        cy.visit(url)
+        cy.visit(url),
+        cy.title().should('be.equal', 'Home | Toro Investimentos')
     }
 
     clicarBotaoCadastrar() {
-        cy.get(cadastroElements.botaoCadastrar).click()
+     //   cy.get(cadastroElements.botaoCadastrar).click()
+        cy.get('.navbar__buttons > .d-lg-none').click()
     }
 
     preencherNome() {

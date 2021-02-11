@@ -4,7 +4,8 @@
   "description": "Desafio Toro Investimentos",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "cypress run --spec \"**/*.feature\"",
+    "test:all": "cypress run --spec \"**/*.features\""
   },
   "dependencies": {
     "cypress": "^6.4.0"
