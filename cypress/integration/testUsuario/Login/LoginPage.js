@@ -7,28 +7,27 @@ const url = "https://app.toroinvestimentos.com.br"
 class LoginPage {
     acessarSite() {
          cy.visit(url)
-         console.log('Valida pagina de Login!')
+         cy.screenshot(console.log('Valida pagina de Login!'))
     }
 
     preencherLogin() {
         cy.get(loginElements.campoCPF()).type('46093860892')
-        console.log('Preenche campo login')
+        cy.screenshot(console.log('Preenche campo login'))
     }
 
     preencherSenha() {
-        cy.get(loginElements.campoSenha()).type('Teste1234')
-        console.log('Preenche campo senha')
+        cy.get(loginElements.campoSenha()).type('Teste1234'),
+        cy.screenshot(console.log('Preenche campo senha'))
     }
 
     clicarEntrar() {
         cy.get(loginElements.botaoContinue()).click()
-        console.log('Clica no botão Continue')
+        cy.screenshot(console.log('Clica no botão Continue'))
     }
 
     validaTelaHome() {
-//        cy.get(loginElements.validaTelaHome()).should('be.equal', ' Oi, Felipe! ')
-        cy.get('h5').should('contain', 'Felipe')
-        console.log('Valida tela Home')
+        cy.get(loginElements.nomeTelaHome).should('contain', 'Felipe'),
+        cy.screenshot(console.log('Valida tela Home'))
     }
 }
 export default LoginPage;
