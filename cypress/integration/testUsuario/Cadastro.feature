@@ -1,4 +1,4 @@
-Feature: Toro Investimentos
+Feature: Toro Investimentos Cadastro
 
   Eu como novo usuario quero me cadastrar
   para operar na bolsa de valores

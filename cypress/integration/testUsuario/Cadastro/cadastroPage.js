@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import CadastroElements from '../Cadastro/CadastroElements'
+import CadastroElements from './CadastroElements'
 const cadastroElements = new CadastroElements
 const url = "https://www.toroinvestimentos.com.br"
 
@@ -12,16 +12,18 @@ class CadastroPage {
     }
 
     clicarBotaoCadastrar() {
-     //   cy.get(cadastroElements.botaoCadastrar).click()
-        cy.get('.navbar__buttons > .d-lg-none').click()
+        cy.get(cadastroElements.botaoCadastrar()).click()
     }
 
     preencherNome() {
-        cy.get(cadastroElements.campoNome()).type('teste')
+        cy.fixture('dadosCliente').as('usuario').then(() => {  
+        cy.get(cadastroElements.campoNome()).type(this.usuario.nome)     
+    //    cy.get(cadastroElements.campoNome()).type('Felipe Vilar')
+    })    
     }
 
     preencherEmail() {
-        cy.get(cadastroElements.campoEmail()).type('teste')
+        cy.get(cadastroElements.campoEmail()).type('felipe.bvilar@gmail.com')
     }
 
     preencherCPF() {
@@ -29,7 +31,11 @@ class CadastroPage {
     }
 
     preencherSenha() {
-        cy.get(cadastroElements.campoSenha()).type('teste1234')
+        cy.get(cadastroElements.campoSenha()).type('Teste1234')
+    }
+
+    clicarBtnContinue() {
+        cy.get(cadastroElements.botaoContinue()).click()
     }
 }
 export default CadastroPage;
