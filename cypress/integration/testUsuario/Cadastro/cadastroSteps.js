@@ -1,5 +1,5 @@
 import { Given, And, When, Then } from 'cypress-cucumber-preprocessor/steps';
-import CadastroPage from '../Cadastro/cadastroPage';
+import CadastroPage from './CadastroPage';
 const cadastroPage = new CadastroPage
 
 
@@ -28,5 +28,5 @@ When(/^informo uma senha$/, () => {
 });
 
 Then(/^clico em continue$/, () => {
-	return true;
+	cadastroPage.clicarBtnContinue();
 });
