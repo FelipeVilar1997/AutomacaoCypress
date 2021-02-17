@@ -26,7 +26,7 @@ class LoginPage {
     }
 
     validaTelaHome() {
-        cy.get(loginElements.nomeTelaHome).should('contain', 'Felipe'),
+        cy.get(loginElements.nomeTelaHome).should('contains', 'Felipe'),
         cy.screenshot(console.log('Valida tela Home'))
     }
 }

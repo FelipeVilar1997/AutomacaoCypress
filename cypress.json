@@ -1,8 +1,6 @@
 {
     "ignoreTestFiles": "*.js",
     "testFiles": "**/*.{feature,features}",
-    " chromeWebSecurity " : false ,
-    " blacklistHosts " : [ " assets.guim.co.uk " , " interativo.guim.co.uk " ],
+    "chromeWebSecurity" : false ,
     "defaultCommandTimeout": 30000
- 
 }
