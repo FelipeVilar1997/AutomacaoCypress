@@ -1,0 +1,2 @@
+- nome: Cypress.io
+  usa: cypress-io/github-action@v2.8.2
